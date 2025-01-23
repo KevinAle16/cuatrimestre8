@@ -14,6 +14,7 @@ const url = "http://jsonplaceholder.typicode.com/albums" ;
 http.open('GET',url,true);
 http.send();
 
+}
 http.onreadystatechange = function(){
 // validar la respuesta
 if(this.status ==200 && this.readyState==4){
@@ -47,7 +48,6 @@ if(this.status ==200 && this.readyState==4){
 
 }else mensaje.innerHTML = "surgio un error O Continua"
 
-}
 }
 
 function limpiar(){
