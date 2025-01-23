@@ -10,7 +10,7 @@ btnLimpiar.addEventListener('click',limpiar);
 function cargar(){
 var registros= 0;
 const http = new XMLHttpRequest;
-const url = "http://jsonplaceholder.typicode.com/albums" ;
+const url = "https://jsonplaceholder.typicode.com/albums"
 http.open('GET',url,true);
 http.send();
 
