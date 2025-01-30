@@ -25,7 +25,8 @@ function buscarPelicula() {
     .then (data =>{
         if(data.Response=="False") mensaje.innerHTML = data.Error;
         else{
-            mostrar(data);                
+            mostrar(data); 
+            limpiar();               
         }
     })
     .catch((error)=>{
@@ -33,6 +34,7 @@ function buscarPelicula() {
     })
 }
     function mostrar(data){
+
         let registros = 1;
         const fila = document.createElement('tr');
         const col1 = document.createElement('td');
