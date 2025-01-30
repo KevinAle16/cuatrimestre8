@@ -23,11 +23,13 @@ function buscarPelicula() {
         return response.json();
     })
     .then (data =>{
+        limpiar()
         if(data.Response=="False") mensaje.innerHTML = data.Error;
         else{
             mostrar(data); 
                          
         }
+        
     })
     .catch((error)=>{
         mensaje.innerHTML = "surgio un error" + error
