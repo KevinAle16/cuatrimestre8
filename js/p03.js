@@ -12,7 +12,7 @@ btnLimpiar.addEventListener('click', limpiar);
 function buscarPelicula() {
     const apikey ="bc7dd543";
     const url = "https://www.omdbapi.com/?apikey=" + apikey + "&t=" + titulo.value;
-    alert(url);
+    
 
     fetch(url)
     .then((response)=>{
