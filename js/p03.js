@@ -26,7 +26,7 @@ function buscarPelicula() {
         limpiar()
         if(data.Response=="False") mensaje.innerHTML = data.Error;
         else{
-            mostrar(data); 
+            mostrar(data);
                          
         }
         
