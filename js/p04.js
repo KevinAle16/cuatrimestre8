@@ -25,7 +25,7 @@ function cargarRazas() {
         .catch(error => {
             console.error('Error al cargar las razas:', error);
             const mensaje = document.getElementById('mensaje');
-            mensaje.textContent = 'Hubo un error al cargar las razas. Por favor, inténtalo de nuevo más tarde.';
+            mensaje.textContent = 'Hubo un error al cargar las razas';
         });
 }
 
@@ -44,7 +44,7 @@ function mostrarImagenRaza() {
             .catch(error => {
                 console.error('Error al cargar la imagen de la raza:', error);
                 const mensaje = document.getElementById('mensaje');
-                mensaje.textContent = 'Hubo un error al cargar la imagen de la raza. Por favor, inténtalo de nuevo más tarde.';
+                mensaje.textContent = 'Hubo un error al cargar la imagen de la raza';
             });
     }
 }
