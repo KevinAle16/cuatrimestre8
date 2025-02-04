@@ -1,0 +1,42 @@
+
+.mi-imagen {
+    display: block;        
+    margin: 20px auto;      
+    width: 200px;           
+    height: auto;           
+    border-radius: 15px;    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.mi-boton {
+    background-color: #28a745; 
+    color: white;            
+    font-size: 16px;         
+    padding: 12px 24px;       
+    border-radius: 8px;       
+    border: none;             
+    cursor: pointer;          
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.mi-boton:hover {
+    background-color: #218838; 
+    transform: scale(1.05);    
+}
+
+.boton-secundario {
+    background-color: #ffc107; 
+    color: black;
+}
+
+.boton-secundario:hover {
+    background-color: #e0a800;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
