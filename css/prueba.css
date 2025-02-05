@@ -39,4 +39,15 @@
     margin-top: 20px;
 }
 
+body {
+    background-color: #bbf5f5b8 !important; 
+    color: #e90303;
+}
+
+.card {
+    background-color: rgb(241, 241, 241) !important; 
+    border-radius: 10px; 
+    padding: 20px;
+}
+
 

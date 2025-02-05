@@ -1,63 +1,50 @@
 const btnCargar = document.getElementById('btnCargar');
 const btnLimpiar = document.getElementById('limpiar');
 const lista = document.getElementById('floatingSelect');
+const imagen = document.getElementById('dogejem');
+const mensaje = document.getElementById('mensaje');
+
 const API_URL = 'https://dog.ceo/api/breeds/list/all';
 const DEFAULT_IMAGE_SRC = '/img/milinois.jpg';
 
-btnCargar.addEventListener('click', cargarRazas);
-btnLimpiar.addEventListener('click', limpiarSeleccion);
-lista.addEventListener('change', mostrarImagenRaza);
+btnCargar.addEventListener('click', cargarImagenRaza);
+btnLimpiar.addEventListener('click', limpiar);
+document.addEventListener("DOMContentLoaded", cargarRazas);
 
 function cargarRazas() {
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
-            const lista = document.getElementById('floatingSelect');
-            lista.innerHTML = '<option selected>Selecciona una raza</option>';
-            const razas = data.message;
-            for (const raza in razas) {
+            lista.innerHTML = "<option selected>Selecciona una raza</option>";
+            function agregarOpcion(valor, texto = null) {
                 const option = document.createElement('option');
-                option.value = raza;
-                option.textContent = raza.charAt(0).toUpperCase() + raza.slice(1);
+                option.value = valor;
+                option.textContent = texto || valor.charAt(0).toUpperCase() + valor.slice(1);
                 lista.appendChild(option);
             }
+            Object.entries(data.message).forEach(([raza, subrazas]) => {
+                agregarOpcion(raza);
+                subrazas.forEach(subraza => agregarOpcion(`${raza}/${subraza}`, `${raza} (${subraza})`));
+            });
         })
-        .catch(error => {
-            console.error('Error al cargar las razas:', error);
-            const mensaje = document.getElementById('mensaje');
-            mensaje.textContent = 'Hubo un error al cargar las razas';
-        });
+        .catch(error => mostrarError('Hubo un error al cargar las razas', error));
 }
 
-function mostrarImagenRaza() {
-    const lista = document.getElementById('floatingSelect');
+function cargarImagenRaza() {
     const razaSeleccionada = lista.value;
     if (razaSeleccionada && razaSeleccionada !== 'Selecciona una raza') {
-        const url = `https://dog.ceo/api/breed/${razaSeleccionada}/images/random`;
-        fetch(url)
+        fetch(`https://dog.ceo/api/breed/${razaSeleccionada}/images/random`)
             .then(response => response.json())
             .then(data => {
-                const imagen = document.getElementById('dogejem');
                 imagen.src = data.message;
-                imagen.alt = `Imagen de un ${razaSeleccionada}`;
+                imagen.alt = `Imagen de ${razaSeleccionada}`;
             })
-            .catch(error => {
-                console.error('Error al cargar la imagen de la raza:', error);
-                const mensaje = document.getElementById('mensaje');
-                mensaje.textContent = 'Hubo un error al cargar la imagen de la raza';
-            });
+            .catch(error => mostrarError('Hubo un error al cargar la imagen', error));
     }
 }
-
-function limpiarSeleccion() {
-    const lista = document.getElementById('floatingSelect');
+function limpiar() {
     lista.selectedIndex = 0;
-    const imagen = document.getElementById('dogejem');
     imagen.src = DEFAULT_IMAGE_SRC;
-    imagen.alt = 'dogejem';
-    const mensaje = document.getElementById('mensaje');
     mensaje.textContent = '';
 }
-
-
 
