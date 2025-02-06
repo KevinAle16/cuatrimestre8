@@ -7,11 +7,11 @@ const mensaje = document.getElementById('mensaje');
 const API_URL = 'https://dog.ceo/api/breeds/list/all';
 const DEFAULT_IMAGE_SRC = '/img/milinois.jpg';
 
-btnCargar.addEventListener('click', cargarImagenRaza);
+btnCargar.addEventListener('click', cargarImagen);
 btnLimpiar.addEventListener('click', limpiar);
-document.addEventListener("DOMContentLoaded", cargarRazas);
+document.addEventListener("DOMContentLoaded", cargarRaza);
 
-function cargarRazas() {
+function cargarRaza() {
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
@@ -27,10 +27,10 @@ function cargarRazas() {
                 subrazas.forEach(subraza => agregarOpcion(`${raza}/${subraza}`, `${raza} (${subraza})`));
             });
         })
-        .catch(error => mostrarError('Hubo un error al cargar las razas', error));
+        .catch(error => mostrarError('Error al cargar las razas', error));
 }
 
-function cargarImagenRaza() {
+function cargarImagen() {
     const razaSeleccionada = lista.value;
     if (razaSeleccionada && razaSeleccionada !== 'Selecciona una raza') {
         fetch(`https://dog.ceo/api/breed/${razaSeleccionada}/images/random`)
@@ -39,7 +39,7 @@ function cargarImagenRaza() {
                 imagen.src = data.message;
                 imagen.alt = `Imagen de ${razaSeleccionada}`;
             })
-            .catch(error => mostrarError('Hubo un error al cargar la imagen', error));
+            .catch(error => mostrarError('Error al cargar la imagen', error));
     }
 }
 function limpiar() {
