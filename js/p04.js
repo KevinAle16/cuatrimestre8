@@ -3,7 +3,6 @@ const btnLimpiar = document.getElementById('limpiar');
 const lista = document.getElementById('floatingSelect');
 const imagen = document.getElementById('dogejem');
 const mensaje = document.getElementById('mensaje');
-
 const API_URL = 'https://dog.ceo/api/breeds/list/all';
 const DEFAULT_IMAGE_SRC = '/img/milinois.jpg';
 
@@ -21,10 +20,10 @@ function cargarRaza() {
                 option.value = valor;
                 option.textContent = texto || valor.charAt(0).toUpperCase() + valor.slice(1);
                 lista.appendChild(option);
-            }
+}
             Object.entries(data.message).forEach(([raza, subrazas]) => {
                 agregarOpcion(raza);
-                subrazas.forEach(subraza => agregarOpcion(`${raza}/${subraza}`, `${raza} (${subraza})`));
+                subrazas.forEach(subraza => agregarOpcion(`${raza}/${subraza}`, `${raza} ${subraza}`));
             });
         })
         .catch(error => mostrarError('Error al cargar las razas', error));
@@ -33,14 +32,15 @@ function cargarRaza() {
 function cargarImagen() {
     const razaSeleccionada = lista.value;
     if (razaSeleccionada && razaSeleccionada !== 'Selecciona una raza') {
-        fetch(`https://dog.ceo/api/breed/${razaSeleccionada}/images/random`)
-            .then(response => response.json())
+    fetch(`https://dog.ceo/api/breed/${razaSeleccionada}/images/random`)
+        .then(response => response.json())
             .then(data => {
                 imagen.src = data.message;
                 imagen.alt = `Imagen de ${razaSeleccionada}`;
             })
             .catch(error => mostrarError('Error al cargar la imagen', error));
     }
+
 }
 function limpiar() {
     lista.selectedIndex = 0;
