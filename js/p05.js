@@ -50,12 +50,15 @@ function mostrar(coctel) {
     const col3 = document.createElement('td');
     col3.textContent = coctel.strInstructions;
     fila.appendChild(col3);
+
+    const col4 = document.createElement('td');
+    col4.textContent = coctel.strAlcoholic;
+    fila.appendChild(col4);
     
     tbody.appendChild(fila);
     tabla.appendChild(tbody);
     imagen.src = coctel.strDrinkThumb;
 }
-
 function obtenerIngr(coctel) {
     let ingredientes = [];
     for (let i = 1; coctel[`strIngredient${i}`]; i++) {

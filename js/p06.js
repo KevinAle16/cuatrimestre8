@@ -30,6 +30,11 @@ function mostrar(coctel) {
     const col3 = document.createElement('td');
     col3.textContent = coctel.strInstructions;
     fila.appendChild(col3);
+
+    const col4 = document.createElement('td');
+    col4.textContent = coctel.strAlcoholic;
+    fila.appendChild(col4);
+
     tbody.appendChild(fila);
     imagen.src = coctel.strDrinkThumb;
 }
@@ -54,5 +59,4 @@ function limpiar() {
     mensaje.innerHTML = "";
     imagen.src = imagenCoctel;
 }
-
 
