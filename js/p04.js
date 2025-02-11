@@ -4,7 +4,7 @@ const lista = document.getElementById('floatingSelect');
 const imagen = document.getElementById('dogejem');
 const mensaje = document.getElementById('mensaje');
 const API_URL = 'https://dog.ceo/api/breeds/list/all';
-const DEFAULT_IMAGE_SRC = '/img/milinois.jpg';
+const DogImage = '/img/milinois.jpg';
 
 btnCargar.addEventListener('click', cargarImagen);
 btnLimpiar.addEventListener('click', limpiar);
@@ -44,7 +44,7 @@ function cargarImagen() {
 }
 function limpiar() {
     lista.selectedIndex = 0;
-    imagen.src = DEFAULT_IMAGE_SRC;
+    imagen.src = DogImage;
     mensaje.textContent = '';
 }
 
