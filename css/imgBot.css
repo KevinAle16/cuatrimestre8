@@ -1,3 +1,26 @@
+.yo-imagen { 
+    display: block;        
+    margin: 20px auto;      
+    width: 200px;    
+    max-width: 500px; 
+    height: auto;           
+    border-radius: 15px;    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;       
+
+    
+     border: 12px solid;
+     border-image-source: url('https://www.transparenttextures.com/patterns/golden-paper.png'); 
+     border-image-slice: 20;
+     border-image-repeat: repeat;
+ 
+     
+     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.yo-imagen:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+}
 
 .mi-imagen {
     display: block;        
