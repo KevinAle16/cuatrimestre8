@@ -11,31 +11,35 @@
             </div>
             <!-- Card -->
             <div class="card">
-                <img src="/img/Tecno.jpg" class="mi-imagen2" alt="Practica 01" style="width: 15rem;">
+                <img src="/img/cocapi.jpg" class="mi-imagen2" alt="Practica 05" style="width: 15rem;">
                 <div class="card-body">
                   <center>
-                  <h5 class="card-title">Practica 01 copia</h5>
-                  <p class="card-text">Prueba de then</p>
-                  <button id="cargarDatos" type="button" class="mi-boton">CargarDatos</button>
+                  <h5 class="card-title">Practica 05</h5>
+                  <p class="card-text">Busca los cócteles segun su nombre</p>
+                  <button id="btnBuscar" type="button" class="mi-boton">Buscar</button>
+                  <input type="text" placeholder="Nombre del coctel" id="txtCoctel">
                   <button id="limpiar" type="button" class="mi-boton">Limpiar</button>
                   <br><br>
                   
-                    <h2> Listado de Albums</h2>
+                    <h2> Información de los cócteles</h2>
                     <br>
                     <table class="table" id="table">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Ingredientes</th>
+                            <th scope="col">Receta</th>
                           </tr>
                         </thead>
                         <tbody id ="tbody">
-                         
+
                         </tbody>
                       </table>
-                  </center>
+                  
+                  <hr>
+                  <img src="/img/cocteles.jpg" class="mi-imagen" alt="coctel" id="coctel">
+                     </center>
+
                   <p id="mensaje" class="card-text"></p>
                 </div>
             </div>
@@ -49,5 +53,5 @@
     </div>
 </body>
     <script src="/js/partials.js"></script>
-    <script src="/js/p01Copia.js"></script>
+    <script src="/js/p05.js"></script>
 </html>

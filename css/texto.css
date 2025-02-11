@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Voga:wght@400;700&display=swap');
+
+h5 {
+    font-family: 'Voga', serif;
+    font-weight: 900; /* Grosor adicional */
+    font-size: 4rem; /* Tamaño grande */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Profundidad (sombra) */
+    color: #222; /* Color oscuro */
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Voga', serif;
+    font-weight: 700; /* Grosor adicional */
+    font-size: 2rem; /* Tamaño grande */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Profundidad (sombra) */
+    color: #222; /* Color oscuro */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Voga', serif;
+    font-weight: 900; /* Grosor adicional */
+    font-size: 1rem; /* Tamaño grande */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Profundidad (sombra) */
+    color: #222; /* Color oscuro */
+    margin-bottom: 20px;
+}

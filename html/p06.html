@@ -11,32 +11,36 @@
             </div>
             <!-- Card -->
             <div class="card">
-                <img src="/img/Tecno.jpg" class="mi-imagen2" alt="Practica 01" style="width: 15rem;">
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <img src="/img/cocapi.jpg" class="mi-imagen2" alt="Practica 06" style="width: 15rem;">
                 <div class="card-body">
                   <center>
-                  <h5 class="card-title">Practica 01 copia</h5>
-                  <p class="card-text">Prueba de then</p>
-                  <button id="cargarDatos" type="button" class="mi-boton">CargarDatos</button>
+                  <h5 class="card-title">Practica 06</h5>
+                  <p class="card-text">Cocteles random</p>
+                  <button id="btnMostrar" type="button" class="mi-boton">Mostrar</button>
                   <button id="limpiar" type="button" class="mi-boton">Limpiar</button>
                   <br><br>
-                  
-                    <h2> Listado de Albums</h2>
+                  <p id="mensaje"></p>
+                    <h2>Ramdom Coctel</h2>
                     <br>
                     <table class="table" id="table">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Ingredientes</th>
+                            <th scope="col">Receta</th>
                           </tr>
                         </thead>
                         <tbody id ="tbody">
-                         
+
                         </tbody>
                       </table>
-                  </center>
-                  <p id="mensaje" class="card-text"></p>
+                  
+                  <hr>
+                  <img src="/img/cocteles.jpg" class="mi-imagen" alt="coctel" id="coctel">
+                     </center>
+
+                 
                 </div>
             </div>
         </main>
@@ -49,5 +53,5 @@
     </div>
 </body>
     <script src="/js/partials.js"></script>
-    <script src="/js/p01Copia.js"></script>
+    <script src="/js/p06.js"></script>
 </html>
