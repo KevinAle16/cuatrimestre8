@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head id = "head_contenido"></head>
+
+<body>
+    
+    <div class="container">
+        <main>
+            <div id="header_contenido"></div>
+
+            <div class="card">
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <img src="/img/mapamundi.jpg" class="mi-imagen2" alt="Practica 03" style="width: 15rem;">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">Pre Examen</h5>
+                        <p class="card-text"></p>
+                        <button id="btnBuscar" type="button" class="mi-boton">Buscar</button>
+                        <input type="text" placeholder="Escribe el nombre del país" id="txtpais">
+                        <button id="limpiar" type="button" class="mi-boton">Limpiar</button>
+
+                        <table class="table" id="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Nombre comun</th>
+                                    <th scope="col">Población</th>
+                                    <th scope="col">Capital</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody"></tbody>
+                        </table>
+
+                        <hr>
+                        <img src="/img/mundo.jpg" class="mi-imagen" alt="mundo" id="mundo">
+                        <p id="himno" class="card-text"></p>
+                    </center>
+
+                    <p id="mensaje" class="card-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="footer_contenido"></div>
+        </footer>
+    </div>
+
+    <script src="/js/partials.js"></script>
+    <script src="/js/p07PreExm.js"></script>
+</body>
+</html>
